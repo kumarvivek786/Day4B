@@ -10,19 +10,26 @@ namespace _4B
     {
         static void Main()
         {
-            int rows = 8;
+            string word = "";
 
-            for (int i = rows; i >= 1; i--)
+            Console.WriteLine("enter word:");
+            word = Console.ReadLine();
+
+            string reverse = "";
+
+            int n = 0;
+
+            char[] charArr = word.ToCharArray();
+            n = charArr.Length;
+
+            for (int i = n - 1; i >= 0; i--)
+
             {
-                for (int j = 1; j <= i; j++)
-                {
-                    Console.Write("*");
-                }
+                reverse = reverse + charArr[i];
 
-                Console.WriteLine();
             }
-
-            Console.ReadLine();
+            Console.WriteLine("after reverse :" + reverse);
+            Console.ReadLine(); ;
         }
     }
 
