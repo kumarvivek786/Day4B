@@ -6,38 +6,24 @@ using System.Threading.Tasks;
 
 namespace _4B
 {
-   
-namespace Day4B
+    class Program
     {
-        internal class Program
+        static void Main()
         {
-            static void Main(string[] args)
+            int rows = 8;
+
+            for (int i = rows; i >= 1; i--)
             {
-                //Create an array with some duplicate elements
-                int[] numbers = { 1, 2, 3, 4, 1, 2, 5, 6, 7, 3 };
-
-                // Initialize a variable to keep track of the number of duplicates
-                int totalDuplicates = 0;
-
-                // Loop through each element in the array
-                for (int i = 0; i < numbers.Length; i++)
+                for (int j = 1; j <= i; j++)
                 {
-                    // Loop through all the following elements in the array
-                    for (int j = i + 1; j < numbers.Length; j++)
-                    {
-                        // If we find a duplicate element, increment the totalDuplicates variable
-                        if (numbers[i] == numbers[j])
-                        {
-                            totalDuplicates++;
-                            break;
-                        }
-                    }
+                    Console.Write("*");
                 }
 
-                // Print the total number of duplicate elements
-                Console.WriteLine("The total number of duplicate elements is: " + totalDuplicates);
+                Console.WriteLine();
             }
+
+            Console.ReadLine();
         }
     }
-}
 
+}
